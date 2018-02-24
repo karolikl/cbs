@@ -30,6 +30,11 @@ namespace TextMessaging
 
         public IEnumerable<string> ErrorMessages => _errorMessages;
 
+        public void AddErrorMessage(string message)
+        {
+            _errorMessages.Add(message);
+        }
+
         void ValidateAllFragmentsHasValue()
         {
             if( Fragments.Any(fragment => !fragment.HasValue) )

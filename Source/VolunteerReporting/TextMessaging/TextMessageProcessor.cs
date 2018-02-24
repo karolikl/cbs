@@ -57,6 +57,7 @@ namespace TextMessaging
             var healthRiskId = _healthRisks.GetIdFromReadableId(parsingResult.Numbers[0]);
             if (healthRiskId == Guid.Empty)
             {
+                parsingResult.AddErrorMessage("The health risk could not be found");
                 ReportInvalidMessage(message, parsingResult, dataCollector, caseReporting, message.Sent);
                 return;
             }
