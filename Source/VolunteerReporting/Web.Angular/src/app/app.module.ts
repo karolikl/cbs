@@ -8,6 +8,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CaseReportModule } from './case-report/case-report.module';
 import { CoreModule } from './core/core.module';
+import { APP_BASE_HREF } from '@angular/common';
+import { environment } from '../environments/environment'; 
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { CoreModule } from './core/core.module';
     RouterModule.forRoot([]),
     CaseReportModule
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue: environment.baseHref}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
