@@ -1,11 +1,11 @@
 /*---------------------------------------------------------------------------------------------
- *  Copyright (c) 2017 International Federation of Red Cross. All rights reserved.
+ *  Copyright (c) 2017-2018 The International Federation of Red Cross and Red Crescent Societies. All rights reserved.
  *  Licensed under the MIT License. See LICENSE in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-
 using System;
 using Autofac.Extensions.DependencyInjection;
-using Logging;
+using doLittle.Applications;
+using Infrastructure.Logging;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Serilog;
@@ -20,6 +20,8 @@ namespace Infrastructure.AspNet
             Action<LoggerConfiguration> loggerConfigurationCallback = null)
             where TStartup : class
         {
+            Internals.BoundedContext = new BoundedContext(boundedContext);
+            
             var loggerConfiguration = new LoggerConfiguration()
                 .MinimumLevel.Verbose()
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Information)

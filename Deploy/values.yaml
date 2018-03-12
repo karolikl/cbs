@@ -1,28 +1,52 @@
 services: 
     admin:
         frontend:
+<<<<<<< HEAD
             version: 1450
             service: cbs-admin-frontend-service
             path: /
         backend:
             version: 1450
+=======
+            version: 1489
+            service: cbs-admin-frontend-service
+            path: /
+        backend:
+            version: 1489
+>>>>>>> upstream/master
             path: /adminbackend
             service: cbs-admin-backend-service
     usermanagement:
         frontend:
+<<<<<<< HEAD
             version: 1451
             service: cbs-usermanagement-frontend-service
             path: /users
         backend:
             version: 1451
+=======
+            version: 1490
+            service: cbs-usermanagement-frontend-service
+            path: /users
+        backend:
+            version: 1490
+>>>>>>> upstream/master
             path: /usermanagementbackend
             service: cbs-usermanagement-backend-service
     volunteerreporting:
         frontend:
+<<<<<<< HEAD
             version: 1449
             service: cbs-volunteerreporting-frontend-service
             path: /reporting
         backend:
             version: 1449
+=======
+            version: 1488
+            service: cbs-volunteerreporting-frontend-service
+            path: /reporting
+        backend:
+            version: 1488
+>>>>>>> upstream/master
             path: /volunteerreportingbackend
             service: cbs-volunteerreporting-backend-service
