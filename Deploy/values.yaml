@@ -1,28 +1,28 @@
 services: 
     admin:
         frontend:
-            version: 1515
+            version: 1518
             service: cbs-admin-frontend-service
             path: /
         backend:
-            version: 1515
+            version: 1518
             path: /adminbackend
             service: cbs-admin-backend-service
     usermanagement:
         frontend:
-            version: 1516
+            version: 1519
             service: cbs-usermanagement-frontend-service
             path: /users
         backend:
-            version: 1516
+            version: 1519
             path: /usermanagementbackend
             service: cbs-usermanagement-backend-service
     volunteerreporting:
         frontend:
-            version: 1514
+            version: 1517
             service: cbs-volunteerreporting-frontend-service
             path: /reporting
         backend:
-            version: 1514
+            version: 1517
             path: /volunteerreportingbackend
             service: cbs-volunteerreporting-backend-service
